@@ -164,6 +164,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("disconnect", () => {
+    const result = userLeave(socket.id);
     console.log(`A user disconnected`);
   });
 
